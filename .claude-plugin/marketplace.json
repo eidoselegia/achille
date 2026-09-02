@@ -1,0 +1,13 @@
+{
+  "name": "achille",
+  "owner": {
+    "name": "Kenny"
+  },
+  "plugins": [
+    {
+      "name": "achille",
+      "source": "./",
+      "description": "Skills that keep your AI honest. Deliberately incomplete. Eighteen decision-hygiene protocols for human-AI collaboration."
+    }
+  ]
+}
