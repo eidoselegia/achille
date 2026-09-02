@@ -1,0 +1,58 @@
+name: New skill proposal
+description: Propose a new decision-hygiene skill
+title: "[proposal] proposed-skill-name"
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One rule with no exceptions: no failure, no merge. Read
+        CONTRIBUTING.md before filing, including the permanent exclusions.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      description: Lowercase letters, digits, and hyphens
+      placeholder: example-skill-name
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: The real failure
+      description: >-
+        The specific incident this rule would have prevented or repaired.
+        De-identified, but real.
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: The rule, in one paragraph
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Why the existing eighteen do not cover it
+      description: Name the nearest existing skill and where it falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Draft frontmatter description
+      description: >-
+        What it does and when it triggers, third person, under 1024
+        characters.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope attestation
+      options:
+        - label: In scope — decision hygiene, model-agnostic, detectably violable.
+          required: true
+        - label: Not in any permanently excluded category.
+          required: true

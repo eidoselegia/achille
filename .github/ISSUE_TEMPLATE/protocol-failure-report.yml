@@ -1,0 +1,69 @@
+name: Protocol failure report
+description: A skill from this repository failed in your real use
+title: "[failure] skill-name: one-line summary"
+labels: ["failure-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most valuable contribution the repository can receive.
+        A confirmed failure that leads to a change is credited in that
+        skill's changelog. De-identify freely — the shape of the failure
+        is what matters, not the names.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill and version
+      placeholder: zorro-protocol 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Model, harness or tool, approximate date
+      placeholder: model name, tool name, 2026-09
+    validations:
+      required: true
+  - type: textarea
+    id: prescribed
+    attributes:
+      label: What the protocol prescribed
+      description: Which part of the skill applied, and what it told the AI to do
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What actually happened
+      description: The behavior you observed, and what it cost
+    validations:
+      required: true
+  - type: dropdown
+    id: reading
+    attributes:
+      label: Your read of the failure
+      options:
+        - Flaw in the rule itself
+        - Wording unclear or unenforceable
+        - AI misapplied a sound rule
+        - I misapplied it (reporting for the record)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Transcript excerpt or minimal reproduction. Redact freely.
+  - type: textarea
+    id: patch
+    attributes:
+      label: Patch idea (optional)
+  - type: checkboxes
+    id: attest
+    attributes:
+      label: Attestation
+      options:
+        - label: This is a real incident, de-identified.
+          required: true
