@@ -33,7 +33,7 @@ product documentation.
 
 Inject the body of a skill, or several, into the system prompt — or use
 the skills capability where the API surface provides one. These files are
-small by design; a typical skill costs one to three thousand tokens.
+small by design; a skill body costs roughly four to six thousand tokens.
 
 ## Cursor, Codex CLI, Gemini CLI, and similar
 
